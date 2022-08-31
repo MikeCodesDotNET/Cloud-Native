@@ -38,6 +38,7 @@ The theme for this week is Azure Functions. We'll talk about ...
 ---
 
 ## What We'll Cover
+
  * Azure Functions and Serverless explained.
  * Exercise: Provision a new Functions App.
  * Exercise: Creating a Function with a HTTP trigger.
@@ -49,6 +50,7 @@ The theme for this week is Azure Functions. We'll talk about ...
 
 
 ## Azure Functions and Serverless explained.
+
 Azure Functions is a serverless compute service that enables you to run code on-demand without explicitly provisioning or managing the underlying infrastructure. 
 
 Developing code that will run in a serverless environment departs from the traditional ASP.NET WebAPI technique of creating controllers with actions. Instead, as the name implies, we make functions as small snippets of functionality. An Azure Function persists these code snippets and meta-information concerning when and how it should get executed. The function sleeps until it has been invoked by a trigger, which wakes it up, runs the code snippet and returns to sleep.
@@ -56,6 +58,7 @@ Developing code that will run in a serverless environment departs from the tradi
 This behaviour allows for a very attractive pricing model where you only pay for the execution time of an Azure Function. If you write code that never gets executed, it won't cost you anything! That means you only pay and Azure Function when it is actually used.
 
 ## Provision a new Functions App.
+
 Multiple Azure Functions are hosted in a Function App. To create one, in the Azure Portal, search for Function App.
 ![The Azure Portal Functions App list with no entries.](img/Step1-NewFunctionsApp.png)
 
@@ -101,11 +104,13 @@ Now that we have an empty Functions App let's go ahead and create our first Func
 To create a new Function, click on the ***Create*** button. 
 
 ### Tooling 
+
 We can write our Function in various ways, with most developers sensibly opting to use their favourite IDEs such as Visual Studio and Visual Studio Code with the [Azure Functions extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions). In the interest of simplicity, we'll opt for the built-in portal editor as it provides the fastest way to get started! 
 
 ![Creating a new function in the portal](img/Step9-CreateFirstFunction.png)
 
 ### Triggers 
+
 As previously mentioned, Azure Functions are based on the concept of **Triggers**, which define when a Function should wake up and execute its code. There are several different [Trigger Bindings](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings) that can be defined in the function's source code or configuration files. Our first function uses the [HTTP Binding](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-http-webhook?tabs=in-process%2Cfunctionsv2&pivots=programming-language-csharp) as a Trigger so it wakes up whenever it recieves a HTTP request. 
 
 We will use the provided HTTP trigger template to jump-start our development. Once you've selected ***HTTP Trigger***, click the ***Create*** button. 
@@ -165,6 +170,6 @@ At the moment, the HTTP requires a function-specific API key to execute it as se
 
 ## Resources
 
-- [CReate a C# Function in Azure using Visual Studio Code](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-csharp?tabs=in-process)
+- [Create a C# Function in Azure using Visual Studio Code](https://docs.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-csharp?tabs=in-process)
 
 - [Monitoring Azure Functions with Application Insights](https://docs.microsoft.com/en-us/azure/azure-functions/functions-monitoring)
